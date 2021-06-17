@@ -19,7 +19,7 @@
                 }
             ],
             "image": "392977643844.dkr.ecr.us-west-2.amazonaws.com/cgp_strapi",
-            "name": "cgp_strapi"
+            "name": "strapi"
         }
     ],
     "memory": "512",
