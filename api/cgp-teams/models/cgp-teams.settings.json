@@ -1,0 +1,100 @@
+{
+  "kind": "collectionType",
+  "collectionName": "cgp_teams",
+  "info": {
+    "name": "cgp_teams",
+    "description": ""
+  },
+  "options": {
+    "idAttribute": "id",
+    "idAttributeType": "uuid",
+    "timestamps": true,
+    "privateAttributes": [
+      "created_at",
+      "updated_at"
+    ],
+    "draftAndPublish": false
+  },
+  "attributes": {
+    "designation": {
+      "type": "string",
+      "required": true
+    },
+    "description": {
+      "type": "text"
+    },
+    "status": {
+      "type": "biginteger",
+      "default": "1"
+    },
+    "banner_url": {
+      "type": "string"
+    },
+    "email": {
+      "type": "string",
+      "required": true,
+      "unique": true,
+      "regex": "[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,64}"
+    },
+    "firstname": {
+      "type": "string",
+      "required": true
+    },
+    "lastname": {
+      "type": "string",
+      "required": true
+    },
+    "city": {
+      "type": "string",
+      "required": true
+    },
+    "role": {
+      "type": "enumeration",
+      "enum": [
+        "ADMIN",
+        "COLLABORATOR",
+        "DIRECTOR"
+      ]
+    },
+    "address_complement": {
+      "type": "string"
+    },
+    "address_type": {
+      "type": "string"
+    },
+    "address_number": {
+      "type": "string",
+      "required": true
+    },
+    "address_street": {
+      "type": "string",
+      "required": true
+    },
+    "country": {
+      "default": "FRANCE",
+      "type": "string",
+      "description": "Country"
+    },
+    "postal_code": {
+      "type": "string",
+      "description": "Postal Code",
+      "required": true,
+      "minLength": 1,
+      "maxLength": 5,
+      "regex": "^[0-9]*$"
+    },
+    "address": {
+      "type": "text"
+    },
+    "active": {
+      "type": "boolean",
+      "default": false,
+      "required": true
+    },
+    "cgp_id": {
+      "cgp_idAttribute": "id",
+      "cgp_idAttributeType": "uuid",
+      "model": "cgp"
+    }
+  }
+}

@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/sub-topics",
+      "handler": "sub-topics.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/sub-topics/count",
+      "handler": "sub-topics.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/sub-topics/:id",
+      "handler": "sub-topics.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/sub-topics",
+      "handler": "sub-topics.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/sub-topics/:id",
+      "handler": "sub-topics.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/sub-topics/:id",
+      "handler": "sub-topics.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

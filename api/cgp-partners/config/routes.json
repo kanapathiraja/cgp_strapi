@@ -1,0 +1,60 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/cgp-partners",
+      "handler": "cgp-partners.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/cgp-partners/count",
+      "handler": "cgp-partners.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/cgp-partners/findPartners/:id",
+      "handler": "cgp-partners.findPartners",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/cgp-partners/:id",
+      "handler": "cgp-partners.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/cgp-partners",
+      "handler": "cgp-partners.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/cgp-partners/:id",
+      "handler": "cgp-partners.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/cgp-partners/:id",
+      "handler": "cgp-partners.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

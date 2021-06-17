@@ -1,0 +1,23 @@
+{
+  "kind": "collectionType",
+  "collectionName": "faq_contents",
+  "info": {
+    "name": "Faq Content",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "draftAndPublish": true,
+    "timestamps": true,
+    "privateAttributes": [
+      "created_at",
+      "updated_at"
+    ]
+  },
+  "attributes": {
+    "content": {
+      "type": "text",
+      "required": true
+    }
+  }
+}

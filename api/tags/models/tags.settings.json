@@ -1,0 +1,27 @@
+{
+  "kind": "collectionType",
+  "collectionName": "subtopic_tags",
+  "info": {
+    "name": "Tags",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": false
+  },
+  "attributes": {
+    "specialty_id": {
+      "model": "specialties"
+    },
+    "tag_title": {
+      "type": "string",
+      "required": true
+    },
+    "active": {
+      "type": "boolean",
+      "default": true,
+      "required": true
+    }
+  }
+}

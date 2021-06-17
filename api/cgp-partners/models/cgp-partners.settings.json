@@ -1,0 +1,33 @@
+{
+  "kind": "collectionType",
+  "collectionName": "cgp_partners",
+  "info": {
+    "name": "Cgp_partners",
+    "description": ""
+  },
+  "options": {
+    "idAttribute": "id",
+    "idAttributeType": "uuid",
+    "timestamps": true,
+    "privateAttributes": [
+      "created_at",
+      "updated_at"
+    ],
+    "draftAndPublish": false
+  },
+  "attributes": {
+    "status": {
+      "type": "integer",
+      "default": 1
+    },
+    "cgp_id": {
+      "cgp_idAttribute": "id",
+      "cgp_idAttributeType": "uuid",
+      "model": "cgp",
+      "via": "cgp_partners"
+    },
+    "partner_id": {
+      "model": "partners"
+    }
+  }
+}

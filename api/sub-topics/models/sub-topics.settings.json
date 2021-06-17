@@ -1,0 +1,31 @@
+{
+  "kind": "collectionType",
+  "collectionName": "subtopics",
+  "info": {
+    "name": "Sub Topics",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": false
+  },
+  "attributes": {
+    "specialty_id": {
+      "model": "specialties"
+    },
+    "subtopic_title": {
+      "type": "string",
+      "required": true,
+      "unique": false
+    },
+    "active": {
+      "type": "boolean",
+      "default": true,
+      "required": true
+    },
+    "description": {
+      "type": "text"
+    }
+  }
+}

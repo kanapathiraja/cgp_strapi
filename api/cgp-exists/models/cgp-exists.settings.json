@@ -1,0 +1,102 @@
+{
+  "kind": "collectionType",
+  "collectionName": "cgp_exists",
+  "info": {
+    "name": "cgp_exists",
+    "description": ""
+  },
+  "options": {
+    "idAttribute": "id",
+    "idAttributeType": "uuid",
+    "increments": true,
+    "timestamps": true,
+    "privateAttributes": [
+      "created_at",
+      "updated_at"
+    ]
+  },
+  "attributes": {
+    "establishment_name": {
+      "type": "string",
+      "required": true
+    },
+    "company_address": {
+      "type": "text"
+    },
+    "e_siret": {
+      "type": "string",
+      "required": true
+    },
+    "h_orias": {
+      "type": "string",
+      "required": true
+    },
+    "h_cif": {
+      "type": "boolean",
+      "default": false
+    },
+    "contact_number": {
+      "type": "string",
+      "required": true
+    },
+    "email": {
+      "type": "string",
+      "required": true
+    },
+    "geolocation": {
+      "type": "string"
+    },
+    "h_company_rcs_siren": {
+      "type": "string"
+    },
+    "h_coa": {
+      "type": "boolean",
+      "default": false,
+      "required": true
+    },
+    "address_complement": {
+      "type": "string"
+    },
+    "address_type": {
+      "type": "string"
+    },
+    "address_number": {
+      "type": "string"
+    },
+    "address_street": {
+      "type": "string"
+    },
+    "city": {
+      "type": "string"
+    },
+    "country": {
+      "type": "string"
+    },
+    "postal_code": {
+      "type": "string"
+    },
+    "comment": {
+      "type": "text"
+    },
+    "status": {
+      "type": "enumeration",
+      "enum": [
+        "Pending",
+        "Done-Accepted",
+        "Done-Rejected"
+      ]
+    },
+    "firstname": {
+      "type": "string"
+    },
+    "lastname": {
+      "type": "string"
+    },
+    "designation": {
+      "type": "string"
+    },
+    "contact_person_email": {
+      "type": "string"
+    }
+  }
+}

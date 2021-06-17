@@ -1,0 +1,28 @@
+{
+  "kind": "collectionType",
+  "collectionName": "notification",
+  "info": {
+    "name": "notification"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "notification_name": {
+      "type": "string"
+    },
+    "notification_message": {
+      "type": "string",
+      "required": true
+    },
+    "status_code": {
+      "type": "string"
+    },
+    "notification_id": {
+      "type": "biginteger",
+      "unique": true
+    }
+  }
+}

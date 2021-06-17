@@ -1,0 +1,60 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/cgp-teams",
+      "handler": "cgp-teams.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/cgp-teams/teams/:id",
+      "handler": "cgp-teams.findTeams",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/cgp-teams/count",
+      "handler": "cgp-teams.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/cgp-teams/:id",
+      "handler": "cgp-teams.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/cgp-teams",
+      "handler": "cgp-teams.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/cgp-teams/:id",
+      "handler": "cgp-teams.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/cgp-teams/:id",
+      "handler": "cgp-teams.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

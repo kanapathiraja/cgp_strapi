@@ -1,0 +1,165 @@
+{
+  "kind": "collectionType",
+  "collectionName": "cgp",
+  "info": {
+    "name": "CGP",
+    "description": ""
+  },
+  "options": {
+    "idAttribute": "id",
+    "idAttributeType": "uuid",
+    "timestamps": true,
+    "privateAttributes": [
+      "created_at",
+      "updated_at"
+    ]
+  },
+  "attributes": {
+
+    "email": {
+      "type": "string",
+      "required": true,
+      "unique": true,
+      "regex": "[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,64}"
+    },
+    "contact_number": {
+      "type": "string",
+      "description": "Contact Number",
+      "required": true,
+      "regex": "^[0-9 ]*$",
+      "minLength": 10,
+      "maxLength": 15
+    },
+    "establishment_name": {
+      "type": "string",
+      "description": "Comapny Name",
+      "required": true,
+      "unique": true
+    },
+    "address_complement": {
+      "type": "text"
+    },
+    "address_type": {
+      "type": "string",
+      "description": "Address Type"
+    },
+    "address_number": {
+      "type": "string",
+      "description": "Address Number",
+      "required": true
+    },
+    "address_street": {
+      "type": "string",
+      "description": "Address Street",
+      "required": true
+    },
+    "city": {
+      "type": "string",
+      "description": "City",
+      "required": true
+    },
+    "country": {
+      "default": "FRANCE",
+      "type": "string",
+      "description": "Country"
+    },
+    "postal_code": {
+      "type": "string",
+      "description": "Postal Code",
+      "required": true,
+      "minLength": 1,
+      "maxLength": 5,
+      "regex": "^[0-9]*$"
+    },
+    "h_orias": {
+      "type": "string",
+      "description": "RCS SIREN",
+      "required": true
+    },
+    "e_siret": {
+      "type": "string",
+      "description": "SIRET",
+      "required": true,
+      "regex": "^[0-9A-Za-z]*$"
+    },
+    "h_company_rcs_siren": {
+      "type": "string",
+      "required": true,
+      "regex": "^[0-9]*$"
+    },
+    "h_cif": {
+      "default": false,
+      "type": "boolean"
+    },
+    "h_coa": {
+      "default": false,
+      "type": "boolean"
+    },
+    "company_address": {
+      "type": "text"
+    },
+    "reason": {
+      "type": "text"
+    },
+    "website": {
+      "type": "string"
+    },
+    "foundedYear": {
+      "type": "string"
+    },
+    "presentation_text": {
+      "type": "text"
+    },
+    "status": {
+      "default": "PENDING",
+      "type": "enumeration",
+      "enum": [
+        "APPROVED",
+        "PENDING",
+        "REJECTED"
+      ]
+    },
+    "linkedin": {
+      "type": "string"
+    },
+    "facebook": {
+      "type": "string"
+    },
+    "twitter": {
+      "type": "string"
+    },
+    "banner_image": {
+      "type": "string"
+    },
+    "geolocation": {
+      "type": "geography",
+      "description": "Geolocation"
+    },
+    "youtube": {
+      "type": "string",
+      "description": "Youtube"
+    },
+    "instagram": {
+      "type": "string",
+      "description": "Instagram"
+    },
+    "logo": {
+      "type": "string"
+    },
+    "user_id": {
+      "type": "uuid"
+    },
+    "cgp_partner": {
+      "via": "cgp_id",
+      "model": "cgp-partners"
+    },
+    "cgp_partners": {
+      "via": "cgp_id",
+      "collection": "cgp-partners"
+    },
+    "visibility": {
+      "type": "boolean",
+      "default": true
+    }
+  }
+}

@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/cgp-exists",
+      "handler": "cgp-exists.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/cgp-exists/count",
+      "handler": "cgp-exists.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/cgp-exists/:id",
+      "handler": "cgp-exists.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/cgp-exists",
+      "handler": "cgp-exists.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/cgp-exists/:id",
+      "handler": "cgp-exists.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/cgp-exists/:id",
+      "handler": "cgp-exists.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}
